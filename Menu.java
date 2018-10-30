@@ -81,7 +81,7 @@ public class Menu{
          System.out.println("Thank you");
             
          washcard.recharge(name, credit, listOfUsers);  
-         washmenu(name, listOfUsers);     
+             
       }
       else if(answer.equals("exit") || answer.equals("EXIT")){
          System.exit(0);
@@ -118,7 +118,7 @@ public class Menu{
       System.out.println("Thank you");
       
    
-      if(credit < 1000 && credit > 200){
+      if(credit < 1001 && credit > 200){
          washcard.createUser(name, credit, listOfUsers);
       }else{System.out.println("Wrong credit amount");
       }
