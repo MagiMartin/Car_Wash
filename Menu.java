@@ -66,6 +66,7 @@ public class Menu{
       }
       else if(answer.equals("check balance") || answer.equals("CHECK BALANCE")){
          washcard.balance(name, listOfUsers);
+         washmenu(name, listOfUsers); 
       }
       else if(answer.equals("refill card") || answer.equals("REFILL CARD")){
          System.out.println("how much do you want?");
@@ -79,7 +80,8 @@ public class Menu{
          Thread.sleep(1000);
          System.out.println("Thank you");
             
-         washcard.recharge(name, credit, listOfUsers);      
+         washcard.recharge(name, credit, listOfUsers);  
+         washmenu(name, listOfUsers);     
       }
       else if(answer.equals("exit") || answer.equals("EXIT")){
          System.exit(0);
