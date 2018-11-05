@@ -35,7 +35,7 @@ public class Menu{
       }
    }
      
-   public void washmenu(String name,ArrayList<Customer> listOfUsers)throws FileNotFoundException, InterruptedException{
+   public void usermenu(String name,ArrayList<Customer> listOfUsers)throws FileNotFoundException, InterruptedException{
       int i = 0;
       
       for(Customer d : listOfUsers){
@@ -50,14 +50,14 @@ public class Menu{
          System.out.println("[Buy Wash]       [Check Balance]     [Refill Card]     [Exit]");
         
          answer = input.nextLine();
-         washes(answer,listOfUsers);
+         washmenu(answer,listOfUsers);
         
       }else {System.out.println("Wrong user name");
          i=0;
       }     
    }
       
-   public void washes(String answer,ArrayList<Customer> listOfUsers)throws FileNotFoundException, InterruptedException{   
+   public void washmenu(String answer,ArrayList<Customer> listOfUsers)throws FileNotFoundException, InterruptedException{   
          
       if(answer.equals("buy wash") || answer.equals("BUY WASH")){
          System.out.println("[1] clean - 100cred     [2]  Maximus - 200cred     [3] Exclusive - 400cred     [4] Ultimate - 1000cred");
@@ -66,7 +66,7 @@ public class Menu{
       }
       else if(answer.equals("check balance") || answer.equals("CHECK BALANCE")){
          washcard.balance(name, listOfUsers);
-         washmenu(name, listOfUsers); 
+         usermenu(name, listOfUsers); 
       }
       else if(answer.equals("refill card") || answer.equals("REFILL CARD")){
          System.out.println("how much do you want?");
