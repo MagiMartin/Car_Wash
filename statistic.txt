@@ -1,4 +1,4 @@
-martin maximus 200
+martin Maximus 200
 nanna clean 100
 freja clean 100
 nanna clean 100
@@ -17,5 +17,3 @@ lasse Exclusive 400
 lasse clean 100
 martin clean 100
 martin clean 100
-jimbo jobmo Ultimate 1000
-jimbo jobmo clean 100

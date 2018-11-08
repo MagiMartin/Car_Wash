@@ -15,6 +15,8 @@ ArrayList<String> stats = new ArrayList<String>();
     int numall =0;
     int countclean=0;
     int countmaximus=0;
+    int countexclusive=0;
+    int countultimate=0;
 
     while(input.hasNext()){
 
@@ -24,8 +26,12 @@ ArrayList<String> stats = new ArrayList<String>();
       String foo1 = input.next();
       if(foo1.equals("clean")){
         countclean++;
-      }else if(foo1.equals("maximus")){
+      }else if(foo1.equals("Maximus")){
         countmaximus++;
+      }else if(foo1.equals("Exclusive")){
+        countexclusive++;
+      }else if(foo1.equals("Ultimate")){
+        countultimate++;
       }
 
       int num = input.nextInt();
@@ -41,6 +47,8 @@ ArrayList<String> stats = new ArrayList<String>();
       System.out.println("average price:\t"+numall/count);
       System.out.println("Clean:\t\t\t"+countclean);
       System.out.println("Maximus:\t\t\t"+countmaximus);
+      System.out.println("Exclusive:\t\t"+countexclusive);
+      System.out.println("Ultimate:\t\t"+countultimate);
 }
 
 
