@@ -1,10 +1,4 @@
-martin 300
+martin 100
 johnny 1200
 ellen 200
-mads 100
-morten 0
-viggo 100
-brian 500
-bryan 700
-dumbo 400
-dumbo 300
+mads 500

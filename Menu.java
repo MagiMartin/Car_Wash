@@ -28,7 +28,7 @@ public class Menu{
       else if(answer.equals("yes") || answer.equals("YES")){
          System.out.println("Insert Washcard... [Type Username]");
          name = input.nextLine();
-         washmenu(name,listOfUsers);
+         usermenu(name,listOfUsers);
       }else if(answer.equals("1234")){
          System.out.println("Welcome Owner this is the overall statistic of the Carwash");
          stats.statistic(); 
@@ -48,7 +48,7 @@ public class Menu{
          System.out.println("Welcome. Choose on of the following:");
          System.out.println("");
          System.out.println("[Buy Wash]       [Check Balance]     [Refill Card]     [Exit]");
-        
+         
          answer = input.nextLine();
          washmenu(answer,listOfUsers);
         
@@ -69,19 +69,26 @@ public class Menu{
          usermenu(name, listOfUsers); 
       }
       else if(answer.equals("refill card") || answer.equals("REFILL CARD")){
-         System.out.println("how much do you want?");
+        
+        
+         System.out.println("input amount of credit you want on wash card  [200-1000]");
          credit = input.nextInt();
-            
-         System.out.println("Insert credit card");
-         Thread.sleep(1000);
-         System.out.println(".");
-         Thread.sleep(1000);
-         System.out.println(".");
-         Thread.sleep(1000);
-         System.out.println("Thank you");
-            
-         washcard.recharge(name, credit, listOfUsers);  
-             
+             if(credit < 1001 && credit > 199){       
+         
+               System.out.println("Insert credit card");
+               Thread.sleep(1000);
+               System.out.println(".");
+               Thread.sleep(1000);
+               System.out.println(".");
+               Thread.sleep(1000);
+               System.out.println("Thank you");
+               
+               washcard.recharge(name, credit, listOfUsers);
+               
+               input.nextLine();
+               usermenu(name,listOfUsers);  
+            }else{System.out.println("Wrong credit amount");
+      }    
       }
       else if(answer.equals("exit") || answer.equals("EXIT")){
          System.exit(0);
@@ -109,6 +116,10 @@ public class Menu{
       
       credit = input.nextInt();
       
+  
+   
+      if(credit < 1001 && credit > 199){
+         
       System.out.println("Insert credit card");
       Thread.sleep(1000);
       System.out.println(".");
@@ -117,8 +128,7 @@ public class Menu{
       Thread.sleep(1000);
       System.out.println("Thank you");
       
-   
-      if(credit < 1001 && credit > 200){
+      
          washcard.createUser(name, credit, listOfUsers);
       }else{System.out.println("Wrong credit amount");
       }

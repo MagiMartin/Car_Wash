@@ -5,7 +5,7 @@ public class Car_Wash{
 
 
 
-public static void main(String[] args)throws FileNotFoundException{
+public static void main(String[] args)throws FileNotFoundException, InterruptedException{
 
 
     Scanner input = new Scanner(new File("users.txt"));

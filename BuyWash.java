@@ -96,6 +96,7 @@ public BuyWash()throws FileNotFoundException{}
       System.out.println("Returning to menu");
     }else{ 
     System.out.println("Wrong input");
+    receipt(name, type, listOfUsers);
     }
    }
   
